@@ -14,6 +14,7 @@ login(credentials, function callback(err, api) {
     });
  
     api.setOptions({listenEvents: true});
+    api.sendMessage('Running...', THREAD_ID);
  
     var stopListening = api.listen(function(err, event) {
         if(err)
